@@ -1,7 +1,10 @@
-from __future__ import annotations
+"""
+Invokes django-admin when the django module is run as a script.
 
-import sys
+Example: python -m django check
+"""
 
-from .features import pilinfo
+from django.core import management
 
-pilinfo(supported_formats="--report" not in sys.argv)
+if __name__ == "__main__":
+    management.execute_from_command_line()
