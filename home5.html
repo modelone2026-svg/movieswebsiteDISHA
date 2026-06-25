@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="اكتشف أفضل الأفلام والمسلسلات بجودة عالية.">
+    <meta name="keywords" content="افلام, مسلسلات, كرتون, اطفال">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Eight - {{ movie.title }}</title>
+    <style>
+        /* لوحة الألوان العصرية (Dark Mode Premium) */
+        :root {
+            --main-bg: #070a12;
+            --card-bg: #111827;
+            --accent-color: #00e5ff;
+            --text-main: #ffffff;
+            --text-muted: #9ca3af;
+        }
+
+        /* إعدادات عامة */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--main-bg);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(180deg, rgba(17, 24, 39, 0.85) 0%, rgba(7, 10, 18, 0) 100%);
+            padding: 25px 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(0, 229, 255, 0.15);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: var(--text-main);
+            text-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+        }
+
+        main {
+            max-width: 1150px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .movie-details {
+            animation: fadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .movie h2 {
+            font-size: 2.4rem;
+            color: var(--accent-color);
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .movie p {
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            max-width: 850px;
+            margin-bottom: 35px;
+            text-align: justify;
+        }
+
+        /* حاوية الفيديو الرئيسية مع الاحتفاظ بنسبة 16:9 بغض النظر عن الجهاز */
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 9/16 = 0.5625 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 20px;
+            background-color: #000;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 0 0 25px rgba(0, 229, 255, 0.1);
+            border: 1px solid rgba(0, 229, 255, 0.25);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-wrapper:hover {
+            border-color: var(--accent-color);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 35px rgba(0, 229, 255, 0.25);
+        }
+
+        /* جعل الفيديو أو الإطار يملأ الحاوية مع الحفاظ على الأبعاد */
+        .video-wrapper video,
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
+            border: none;
+            display: block;
+            object-fit: contain; /* يظهر المحتوى كاملاً دون اقتطاع */
+        }
+
+        /* نفس الشيء للحلقات */
+        .episode .video-wrapper {
+            padding-bottom: 56.25%;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .episode .video-wrapper:hover {
+            border-color: rgba(0, 229, 255, 0.35);
+            transform: translateY(-3px);
+        }
+
+        .no-video {
+            background: rgba(239, 68, 68, 0.06);
+            color: #f87171;
+            padding: 25px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid rgba(239, 68, 68, 0.15);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* قائمة الحلقات */
+        .episodes-list {
+            margin-top: 60px;
+        }
+
+        .episodes-list h3 {
+            font-size: 1.7rem;
+            color: var(--text-main);
+            border-right: 5px solid var(--accent-color);
+            padding-right: 15px;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .episode {
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .episode:hover {
+            transform: translateY(-6px);
+            border-color: rgba(0, 229, 255, 0.35);
+            box-shadow: 0 12px 30px rgba(0, 229, 255, 0.08);
+        }
+
+        .episode h4 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 35px 20px;
+            margin-top: 80px;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* تحسينات إضافية للهواتف */
+        @media (max-width: 768px) {
+            main { margin: 20px auto; }
+            .movie h2 { font-size: 1.8rem; }
+            .movie p { font-size: 1.05rem; margin-bottom: 25px; }
+            header h1 { font-size: 1.4rem; }
+            .episodes-list h3 { font-size: 1.4rem; }
+            .episode { padding: 15px; border-radius: 16px; }
+            .video-wrapper { border-radius: 14px; }
+        }
+
+        /* دعم المتصفحات القديمة جداً (fallback) */
+        @supports not (aspect-ratio: 16/9) {
+            .video-wrapper {
+                padding-bottom: 56.25%;
+            }
+        }
+    </style>
+</head>
+<body dir="rtl">
+    <header>
+        <h1>🎬 {{ movie.title }}</h1>
+    </header>
+
+    <main>
+        <section class="movie-details">
+            <div class="movie">
+                <h2>{{ movie.title }}</h2>
+                <p>{{ movie.description }}</p>
+
+                <!-- الفيديو الرئيسي -->
+                <div class="video-wrapper">
+                    {% if movie.video_file %}
+                        <video controls playsinline webkit-playsinline>
+                            <source src="{{ movie.video_file.url }}" type="video/mp4">
+                            <source src="{{ movie.video_file.url }}" type="video/webm">
+                            المتصفح لا يدعم تشغيل الفيديو.
+                        </video>
+                    {% elif movie.video_url %}
+                        <iframe 
+                            src="{{ movie.video_url }}"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    {% else %}
+                        <div class="no-video">⚠️ لا يوجد فيديو متاح حالياً</div>
+                    {% endif %}
+                </div>
+
+                <!-- عرض الحلقات إن وجدت -->
+                {% if movie.episodes.all %}
+                    <div class="episodes-list">
+                        <h3>📺 الحلقات:</h3>
+                        {% for episode in movie.episodes.all %}
+                            <div class="episode">
+                                <h4>الحلقة {{ episode.episode_number }}: {{ episode.title }}</h4>
+                                <div class="video-wrapper">
+                                    {% if episode.video_file %}
+                                        <video controls playsinline webkit-playsinline>
+                                            <source src="{{ episode.video_file.url }}" type="video/mp4">
+                                            <source src="{{ episode.video_file.url }}" type="video/webm">
+                                            المتصفح لا يدعم تشغيل الفيديو.
+                                        </video>
+                                    {% elif episode.video_url %}
+                                        <iframe 
+                                            src="{{ episode.video_url }}"
+                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen
+                                            loading="lazy">
+                                        </iframe>
+                                    {% else %}
+                                        <div class="no-video">⚠️ لا يوجد فيديو لهذه الحلقة</div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2025</p>
+    </footer>
+</body>
+</html>

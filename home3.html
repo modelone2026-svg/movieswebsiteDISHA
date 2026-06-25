@@ -1,0 +1,679 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- وصف الصفحه -->
+    <meta name="description" content="اكتشف أفضل الأفلام والمسلسلات في جميع الأنواع مثل الأكشن، الدراما، الكوميديا، والرعب. استمتع بمشاهدة أحدث العروض، تقييمات المستخدمين، والمحتوى الحصري على موقعنا. شاهد الآن بجودة عالية وبأفضل تجربة ترفيهية!">
+    <!-- الكليمات المفتاحيه -->
+    <meta name="keyword" content="افلام , مسلسلات , كرتون , اطفال">
+    <!-- file css -->
+    <link rel="stylesheet" href="{% static 'styles/home.css' %}">
+    <!-- link icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Eight</title>
+</head>
+<!-- بدايه الصفحه -->
+<body dir="rtl">
+    <!-- start header -->
+    <header>
+        <!-- بدايه قسم القائمه و التنيهات -->
+       <div class="sh-right">
+        <!-- بدايه قسم القائمه -->
+        <div class="img">
+            <!-- صوره القائمه -->
+            <img src="{% static 'images/img-home/Align Justify.png' %}" class="meun" id="meun">
+            <!--  بدايه قسم الامتدادات الموجوده فى القائمه -->
+            <div class="navgation">
+                <!-- قسم غلق القائمه -->
+                <div class="icon">
+                    <i class="fa-solid fa-xmark" id="cloes"></i>
+                </div>
+                <!-- بدايه قسم اسم المستخدم و الصوره الخاصه بحسابه -->
+                <div class="user-infor">
+                    <div class="pro" id="">
+                        <label for="filein" id="fil">
+                            <input type="file" name="image-user" id="filein" accept="image/*" hidden>
+                            <div id="view">
+                            </div>
+                        </label>
+                    </div>
+                    <div class="infor">
+                        <h1>UserName</h1>
+                    </div>
+                </div>
+                 <!-- نهايه قسم اسم المستخدم و الصوره الخاصه بحسابه -->
+                 <!-- بدايه قسم اقسام الموقع-->
+                <nav>
+                    <ul>
+                        <!-- <li><a href="">الرئسيه</a></li> -->
+                        <li><a href="../movise page/mov-p.html">افلام</a></li>
+                        <li><a href="../ser page/ser-p.html">مسلسلات</a></li>
+                        <li><a href="">اطفال</a></li>
+                    </ul>
+                </nav>
+                <!-- نهايه قسم اقسام الموقع-->
+                 <!-- بدايه قسم تسجيل الخروج -->
+                <div class="out">
+                    <h2>تسجيل خروج</h2>
+                    <img src="{% static 'images/img-home/Logout 03.png' %}">
+                </div>
+                <!-- نهايه قسم تسجيل الخروج -->
+            </div>
+        </div>
+        <!-- نهايه قسم القائمه -->
+         <!--  -->
+
+        <!-- -->
+       </div>
+        <!-- نهايه قسم القائمه و التنيهات -->
+
+        <!-- بدايه قسم البحث و شعار الموقع -->
+        <div class="sh-left">
+            <!-- بدايه قسم البحث -->
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" name="search" id="search" placeholder="بحث">
+            </div>
+            <!-- نهايه قسم البحث -->
+             <!-- بدايه قسم شعار الموقع -->
+            <div class="img-logo">
+                <img src="{% static 'images/img-home/Rectangle 25.png' %}"class="logo">
+            </div>
+             <!-- نهايه قسم شعار الموقع -->
+        </div>
+         <!-- نهايه قسم البحث و شعار الموقع -->
+    </header>
+    <!-- end header -->
+     <!-- start section one -->
+    <section class="se-one">
+        <!--  بدايه القسم الخاص ب اذرار التحريك -->
+            <div class="direction">
+            <button id="prev">❮</button>
+            <button id="next">❯</button>
+            </div>
+         <!--  نهايه القسم الخاص ب اذرار التحريك -->
+        <!--section بدايه قسم الخاص ب محتوي ال  -->
+        <div id="formlist">
+            <div id="list">
+                <div class="item">
+                    <img src="{% static 'images/img-home/1.png' %}" class="avatar">
+                    <span>قريبا</span>
+                </div>
+                <div class="item">
+                    <img src="{% static 'images/img-home/2.png' %}" class="avatar">
+                    <span>قريبا</span>
+                </div>
+                <div class="item">
+                    <img src="{% static 'images/img-home/3.png' %}" class="avatar">
+                    <span>قريبا</span>
+                </div>
+                <div class="item">
+                    <img src="{% static 'images/img-home/4.png' %}" class="avatar">
+                    <span>قريبا</span>
+                </div>
+                <div class="item">
+                    <img src="{% static 'images/img-home/5.png' %}" class="avatar">
+                    <span>قريبا</span>
+                </div>
+            </div>
+        </div>
+        <!--section نهايه قسم الخاص ب محتوي ال  -->
+
+    </section>
+     <!-- end section one -->
+      <rb></rb>
+      <br>
+       <!-- start section two -->
+<!-- {% for category in categories %} -->
+    <section class="se-two">
+        <!--  بدايه القسم الخاص ب اذرار التحريك -->
+        <div class="btn-text">
+            <h1>كوميدى</h1>
+            <div class="direction">
+                <button id="prev2">❮</button>
+                <button id="next2">❯</button>
+            </div>
+        </div>
+        <!--  نهايه القسم الخاص ب اذرار التحريك -->
+         <!-- section two بدايه قسم المحتوى  -->
+        <div id="formlist2">
+            <div id="list2">
+                 <!-- 1 -->
+            {% for movie in movies %}
+                 <div class="item2">
+                    <img src="{{ movie.image.url}}" class="avatar">
+                    <div class="text-d">
+                        <h2>{{ movie.title }}</h2>
+                        <p>تصنيف: <span>{{ movie.category }}</span></p>
+                        <p>التقيم: <span>{{ movie.rating }}<i class="fa-regular fa-star"></i></span></p>
+                        <p>البلد: <span>مصر</span></p>
+                        <p>الحلقه: <span>الثانيه عشر</span></p>
+                    </div>
+                    <a href="{% url 'int:movie_kids_id'%}">{{ movie.title }}</a>
+                    <!-- <a href="{% url 'movie' movie.id %}"></a> -->
+                </div>
+                {% endfor %}
+  
+            </div>
+        </div>
+    <!-- {% endfor %} -->
+         <!-- section two نهايه قسم المحتوى  -->
+    </section>
+     <!-- end section two -->
+       <!-- start section therr -->
+    <section class="se-therr">
+         <!--  بدايه القسم الخاص ب اذرار التحريك -->
+        <div class="btn-text2">
+            <h1>دراما</h1>
+            <div class="direction">
+                <button id="prev3">❮</button>
+                <button id="next3">❯</button>
+            </div>
+        </div>
+         <!--  نهايه القسم الخاص ب اذرار التحريك -->
+        <!-- section therr بدايه قسم المحتوى  -->
+        <div id="formlist3">
+            <div id="list3">                
+                <!-- 2 -->
+            {% for movie in movies %}
+                <div class="item3">
+                    <img src="{{ movie.image.url}}" class="avatar">
+                    <div class="text-d">
+                        <h2>{{ movie.title }}</h2>
+                        <p>تصنيف: <span>{{ movie.category }}</span></p>
+                        <p>التقيم: <span>{{ movie.rating }}<i class="fa-regular fa-star"></i></span></p>
+                        <p>البلد: <span>مصر</span></p>
+                        <p>الحلقه: <span>الحاديه و عشر</span></p>
+                    </div>
+                    <a href="{% url 'movie' movie.id %}"></a>
+                    <span class="vip">VIP</span>
+                </div>
+             {% endfor %}
+                <!-- 3 -->
+            </div>
+        </div>
+        <!-- section therr نهايه قسم المحتوى  -->
+    </section>
+    <!-- end section therr -->
+
+    <!-- start section four -->
+    <section class="se-four">
+         <!--  بدايه القسم الخاص ب اذرار التحريك -->
+        <div class="btn-text3">
+            <h1>اكشن</h1>
+            <div class="direction">
+                <button id="prev4">❮</button>
+                <button id="next4">❯</button>
+            </div>
+        </div>
+         <!--  نهايه القسم الخاص ب اذرار التحريك -->
+        <!-- section four بدايه قسم المحتوى  -->
+        <div id="formlist4">
+            <div id="list4">
+                <!-- 1 -->
+            {% for movie in movies %}
+                <div class="item4">
+                    <img src="{{ movie.image.url}}" class="avatar">
+                    <div class="text-d">
+                        <h2>{{ movie.title }}</h2>
+                        <p>تصنيف: <span>{{ movie.category }}</span></p>
+                        <p>التقيم: <span>{{ movie.rating }}<i class="fa-regular fa-star"></i></span></p>
+                        <p>البلد: <span>مصر</span></p>
+                    </div>
+                    <a href="{% url 'movie' movie.id %}"></a>
+                    <span class="vip">VIP</span>
+                </div>
+            {% endfor %}
+                <!-- 2 -->
+            </div>
+        </div>
+        <!-- section four نهايه قسم المحتوى  -->
+    </section>
+    <!-- end section four -->
+     <!-- start section five -->
+    <section class="se-five">
+        <!--  بدايه القسم الخاص ب اذرار التحريك -->
+        <div class="btn-text4">
+            <h1>جريمة</h1>
+            <div class="direction">
+                <button id="prev5">❮</button>
+                <button id="next5">❯</button>
+            </div>
+        </div>
+        <!--  نهايه القسم الخاص ب اذرار التحريك -->
+          <!-- section five بدايه قسم المحتوى  -->
+        <div id="formlist5">
+            <div id="list5">
+                <!-- 1 -->
+            {% for movie in movies %}
+                <div class="item5">
+                    <img src="{{ movie.image.url}}" class="avatar">
+                    <div class="text-d">
+                        <h2>{{ movie.title }}</h2>
+                        <p>تصنيف: <span>{{ movie.category }}</span></p>
+                        <p>التقيم: <span>{{ movie.rating }}<i class="fa-regular fa-star"></i></span></p>
+                        <p>البلد: <span>مصر</span></p>
+                    </div>
+                    <a href="{% url 'movie' movie.id %}"></a>
+                    <span class="vip">VIP</span>
+                </div>
+            {% endfor %}
+                <!-- 2 -->
+        </div>
+        <!-- section five نهايه قسم المحتوى  -->
+    </section>
+    <!-- end section five -->
+     <!-- start section sex -->
+    <section class="se-sex">
+         <!--  بدايه القسم الخاص ب اذرار التحريك -->
+        <div class="btn-text5">
+            <h1>رومانسى</h1>
+            <div class="direction">
+                <button id="prev6">❮</button>
+                <button id="next6">❯</button>
+            </div>
+        </div>
+         <!--  نهايه القسم الخاص ب اذرار التحريك -->
+           <!-- section sex بدايه قسم المحتوى  -->
+        <div id="formlist6">
+            <div id="list6">
+                <!-- 1 -->
+                <div class="item6">
+                    <img src="{% static '../imgMovies/xx.png' %}" class="avatar">
+                    <div class="text-d">
+                        <h2>xمرتى</h2>
+                        <p>تصنيف: <span>كوميدي، إثارة</span></p>
+                        <p>التقيم: <span>7.6<i class="fa-regular fa-star"></i></span></p>
+                        <p>البلد: <span>مصر</span></p>
+                    </div>
+                    <a href="../movie-1/movie1.html"></a>
+                    <span class="vip">VIP</span>
+                </div>
+                <!-- 2 -->
+                <div class="item6">
+                    <img src="{% static '../imgMovies/anf.png' %}" class="avatar">
+                    <div class="text-d">
+                        <h2>انف و ثلاث عيون</h2>
+                        <p>تصنيف: <span>اثاره و تشويق , رومانسى</span></p>
+                        <p>التقيم: <span>5.6<i class="fa-regular fa-star"></i></span></p>
+                        <p>البلد: <span>مصر</span></p>
+                    </div>
+                    <a href="../movie-5/movie1.html"></a>
+                </div>
+                <!-- 3 -->
+                <div class="item6">
+                    <img src="{% static '../imgMovies/ald.png' %}" class="avatar">
+                    <div class="text-d">
+                        <h2>aladdin</h2>
+                        <p>تصنيف: <span>خيال علمى , رومانسى</span></p>
+                        <p>التقيم: <span>6.9<i class="fa-regular fa-star"></i></span></p>
+                        <p>البلد: <span>امريكا</span></p>
+                    </div>
+                    <a href="../movie-28/movie1.html"></a>
+                    <span class="vip">VIP</span>
+                </div>
+                <!-- 4 -->
+                <div class="item6">
+                    <img src="{% static '../imgMovies/lzz.jpeg' %}" class="avatar">
+                    <div class="text-d">
+                        <h2>فاصل من اللحظات اللذيذة</h2>
+                        <p>تصنيف: <span>كوميدي، إثارة</span></p>
+                        <p>التقيم: <span>7.3<i class="fa-regular fa-star"></i></span></p>
+                        <p>البلد: <span>مصر</span></p>
+                    </div>
+                    <a href="../movie-32/movie1.html"></a>
+                    <span class="vip">VIP</span>
+                </div>
+                <!-- 5 -->
+                <div class="item6">
+                    <img src="{% static '../imgMovies/fark.png' %}" class="avatar">
+                    <div class="text-d">
+                        <h2>فرق خبرة</h2>
+                        <p>تصنيف: <span>دراما، رومانسية</span></p>
+                        <p>التقيم: <span>6<i class="fa-regular fa-star"></i></span></p>
+                        <p>البلد: <span>مصر</span></p>
+                    </div>
+                    <a href="../movie-19/movie1.html"></a>
+                </div>
+                <!-- 7 -->
+                <div class="item6">
+                    <img src="{% static '../imgMovies/tow.png' %}" class="avatar">
+                    <div class="text-d">
+                        <h2>توأم روحي</h2>
+                        <p>تصنيف: <span>رومانسى</span></p>
+                        <p>التقيم: <span>6<i class="fa-regular fa-star"></i></span></p>
+                        <p>البلد: <span>مصر</span></p>
+                    </div>
+                    <a href="../movie-17/movie1.html"></a>
+                    <span class="vip">VIP</span>
+                </div>
+                <!-- 7 -->
+                <div class="item6">
+                    <img src="{% static '../imgMovies/day.png' %}" class="avatar">
+                    <div class="text-d">
+                        <h2>كدبه كل يوم</h2>
+                        <p>تصنيف: <span>كوميدى اجتماعى</span></p>
+                        <p>التقيم: <span>6.9<i class="fa-regular fa-star"></i></span></p>
+                        <p>البلد: <span>مصر</span></p>
+                    </div>
+                    <a href="../movie-18/movie1.html"></a>
+                </div>
+                <!-- 9 -->
+                <div class="item6">
+                    <img src="{% static '../imgMovies/nas.png' %}" class="avatar">
+                    <div class="text-d">
+                        <h2>ابو نسب</h2>
+                        <p>تصنيف: <span>كوميدى اجتماعى</span></p>
+                        <p>التقيم: <span>6.5<i class="fa-regular fa-star"></i></span></p>
+                        <p>البلد: <span>مصر</span></p>
+                    </div>
+                    <a href="../movie-4/movie1.html"></a>
+                    <span class="vip">VIP</span>
+                </div>
+                <!-- 9 -->
+                <div class="item6">
+                    <img src="{% static '../imgMovies/ahmed.png' %}" class="avatar">
+                    <div class="text-d">
+                        <h2>أحمد نوتردام</h2>
+                        <p>تصنيف: <span>كوميدي</span></p>
+                        <p>التقيم: <span>5.6<i class="fa-regular fa-star"></i></span></p>
+                        <p>البلد: <span>مصر</span></p>
+                    </div>
+                    <a href="../movie-8/movie1.html"></a>
+                </div>
+                <!-- 10 -->
+            </div>
+        </div>
+        <!-- section esx نهايه قسم المحتوى  -->
+    </section>
+    <!-- end section sex-->
+     <!-- start section seven -->
+    <section class="se-seven">
+        <!--  بدايه القسم الخاص ب اذرار التحريك -->
+        <div class="btn-text6">
+            <h1>خيال علمى</h1>
+            <div class="direction">
+                <button id="prev7">❮</button>
+                <button id="next7">❯</button>
+            </div>
+        </div>
+        <!--  نهايه القسم الخاص ب اذرار التحريك -->
+          <!-- section seven بدايه قسم المحتوى  -->
+        <div id="formlist7">
+            <div id="list7">
+                <!-- 1 -->
+                <div class="item7">
+                    <img src="{% static '../imgMovies/aend.png' %}" class="avatar">
+                    <div class="text-d">
+                        <h2>Avengers end game</h2>
+                        <p>تصنيف: <span>خيال,اكشن</span></p>
+                        <p>التقيم: <span>8.4<i class="fa-regular fa-star"></i></span></p>
+                        <p>البلد: <span>امريكا</span></p>
+                    </div>
+                    <a href="../movie-10/movie1.html"></a>
+                </div>
+                <!-- 2 -->
+                <div class="item7">
+                    <img src="{% static '../imgMovies/mag.png' %}" class="avatar">
+                    <div class="text-d">
+                        <h2>Mowgli</h2>
+                        <p>تصنيف: <span>مغامرات , خيال علمى</span></p>
+                        <p>التقيم: <span>6.5<i class="fa-regular fa-star"></i></span></p>
+                        <p>البلد: <span>امريكا</span></p>
+                    </div>
+                    <a href="../movie-27/movie1.html"></a>
+                    <span class="vip">VIP</span>
+                </div>
+                <!-- 3 -->
+                <div class="item7">
+                    <img src="{% static '../imgMovies/anf.png' %}" class="avatar">
+                    <div class="text-d">
+                        <h2>aladdin</h2>
+                        <p>تصنيف: <span>خيال علمى , رومانسى</span></p>
+                        <p>التقيم: <span>5.6<i class="fa-regular fa-star"></i></span></p>
+                        <p>البلد: <span>امريكا</span></p>
+                    </div>
+                    <a href="../movie-28/movie1.html"></a>
+                    <span class="vip">VIP</span>
+                </div>
+                <!-- 4 -->
+                <div class="item7">
+                    <img src="{% static '../imgMovies/cu.png' %}" class="avatar">
+                    <div class="text-d">
+                        <h2>cruella</h2>
+                        <p>تصنيف: <span>كوميدي,مغامره,جريمه</span></p>
+                        <p>التقيم: <span>7.3<i class="fa-regular fa-star"></i></span></p>
+                        <p>البلد: <span>امريكا</span></p>
+                    </div>
+                    <a href="../movie-16/movie1.html"></a>
+                    <span class="vip">VIP</span>
+                </div>
+                <!-- 5 -->
+                <div class="item7">
+                    <img src="{% static '../imgMovies/nas.png' %}" class="avatar">
+                    <div class="text-d">
+                        <h2>لص بغداد</h2>
+                        <p>تصنيف: <span>كوميدي، أكشن </span></p>
+                        <p>التقيم: <span>6.8<i class="fa-regular fa-star"></i></span></p>
+                        <p>البلد: <span>مصر</span></p>
+                    </div>
+                    <a href="../movie-29/movie1.html"></a>
+                </div>
+                <!-- 6 -->
+                <div class="item7">
+                    <img src="{% static '../imgMovies/cas.png' %}" class="avatar">
+                    <div class="text-d">
+                        <h2>أهل الكهف</h2>
+                        <p>تصنيف: <span>إثارة,دراما ,تاريخي ,خيالي</span></p>
+                        <p>التقيم: <span>7.3<i class="fa-regular fa-star"></i></span></p>
+                        <p>البلد: <span>مصر</span></p>
+                    </div>
+                    <a href="../movie-33/movie1.html"></a>
+                    <span class="vip">VIP</span>
+                </div>
+                <!-- 7 -->
+                <div class="item7">
+                    <img src="{% static '../imgMovies/dido.png' %}" class="avatar">
+                    <div class="text-d">
+                        <h2>ديدو</h2>
+                        <p>تصنيف: <span>كوميدي,خيال علمى</span></p>
+                        <p>التقيم: <span>6.5<i class="fa-regular fa-star"></i></span></p>
+                        <p>البلد: <span>مصر</span></p>
+                    </div>
+                    <a href="../movie-15/movie1.html"></a>
+                    <span class="vip">VIP</span>
+                </div>
+                <!-- 8 -->
+                <div class="item7">
+                    <img src="{% static '../imgMovies/lqs.png' %}" class="avatar">
+                    <div class="text-d">
+                        <h2>حامل اللقب</h2>
+                        <p>تصنيف: <span>كوميدي</span></p>
+                        <p>التقيم: <span>6.3<i class="fa-regular fa-star"></i></span></p>
+                        <p>البلد: <span>مصر</span></p>
+                    </div>
+                    <a href="../movie-34/movie1.html"></a>
+                    <span class="vip">VIP</span>
+                </div>
+                <!-- 9 -->
+                <div class="item7">
+                    <img src="{% static '../imgMovies/dam.png' %}" class="avatar">
+                    <div class="text-d">
+                        <h2>خط الدم</h2>
+                        <p>تصنيف: <span>رعب، تشويق وإثارة</span></p>
+                        <p>التقيم: <span>4<i class="fa-regular fa-star"></i></span></p>
+                        <p>البلد: <span>مصر</span></p>
+                    </div>
+                    <a href="../movie-20/movie1.html"></a>
+                    <span class="vip">VIP</span>
+                </div>
+            </div>
+        </div>
+        <!-- section seven نهايه قسم المحتوى  -->
+    </section>
+    <!-- end section seven -->
+     <!-- start section eight -->
+    <section class="se-eight">
+         <!--  بدايه القسم الخاص ب اذرار التحريك -->
+        <div class="btn-text7">
+            <h1>تشويق</h1>
+            <div class="direction">
+                <button id="prev8">❮</button>
+                <button id="next8">❯</button>
+            </div>
+        </div>
+         <!--  نهايه القسم الخاص ب اذرار التحريك -->
+            <!-- section eight بدايه قسم المحتوى  -->
+        <div id="formlist8">
+            <div id="list8">
+                <!-- 1 -->
+                <div class="item8">
+                    <img src="{% static '../imgMovies/small-s.png' %}" class="avatar">
+                    <div class="text-d">
+                        <h2>العنكبوت</h2>
+                        <p>تصنيف: <span>أكشن، إثارة، جريمة</span></p>
+                        <p>التقيم: <span>5.1<i class="fa-regular fa-star"></i></span></p>
+                        <p>البلد: <span>مصر</span></p>
+                    </div>
+                    <a href="../movie-14/movie1.html"></a>
+                    <span class="vip">VIP</span>
+                </div>
+                <!-- 2 -->
+                <div class="item8">
+                    <img src="{% static '../imgMovies/dam.png' %}" class="avatar">
+                    <div class="text-d">
+                        <h2>خط الدم</h2>
+                        <p>تصنيف: <span>رعب، تشويق وإثارة</span></p>
+                        <p>التقيم: <span>4<i class="fa-regular fa-star"></i></span></p>
+                        <p>البلد: <span>مصر</span></p>
+                    </div>
+                    <a href="../movie-20/movie1.html"></a>
+                    <span class="vip">VIP</span>
+                </div>
+                <!-- 3 -->
+                <div class="item8">
+                    <img src="{% static '../imgMovies/ha.png' %}" class="avatar">
+                    <div class="text-d">
+                        <h2>ليله هنا و سرور</h2>
+                        <p>تصنيف: <span>كوميدي,إثارة</span></p>
+                        <p>التقيم: <span>6.5<i class="fa-regular fa-star"></i></span></p>
+                        <p>البلد: <span>مصر</span></p>
+                    </div>
+                    <a href="../movie-24/movie1.html"></a>
+                </div>
+                <!-- 4 -->
+                <div class="item8">
+                    <img src="{% static '../imgMovies/cas.png' %}" class="avatar">
+                    <div class="text-d">
+                        <h2>أهل الكهف</h2>
+                        <p>تصنيف: <span>إثارة,دراما ,تاريخي ,خيالي</span></p>
+                        <p>التقيم: <span>7.3<i class="fa-regular fa-star"></i></span></p>
+                        <p>البلد: <span>مصر</span></p>
+                    </div>
+                    <a href="../movie-33/movie1.html"></a>
+                    <span class="vip">VIP</span>
+                </div>
+                <!-- 5 -->
+                <div class="item8">
+                    <img src="{% static '../imgMovies/ma.png' %}" class="avatar">
+                    <div class="text-d">
+                        <h2>الممر</h2>
+                        <p>تصنيف: <span>حربى، إثارة</span></p>
+                        <p>التقيم: <span>8.5<i class="fa-regular fa-star"></i></span></p>
+                        <p>البلد: <span>مصر</span></p>
+                    </div>
+                    <a href="../movie-12/movie1.html"></a>
+                </div>
+                <!-- 6 -->
+                <div class="item8">
+                    <img src="{% static '../imgMovies/talk.png' %}" class="avatar">
+                    <div class="text-d">
+                        <h2>طلق صناعى</h2>
+                        <p>تصنيف: <span>دراما،,كوميدي</span></p>
+                        <p>التقيم: <span>7.3<i class="fa-regular fa-star"></i></span></p>
+                        <p>البلد: <span>مصر</span></p>
+                    </div>
+                    <a href="../movie-22/movie1.html"></a>
+                </div>
+                <!-- 7 -->
+                <div class="item8">
+                    <img src="{% static '../imgMovies/404.png' %}" class="avatar">
+                    <div class="text-d">
+                        <h2>رحله 404</h2>
+                        <p>تصنيف: <span>إثارة ,درما</span></p>
+                        <p>التقيم: <span>7.1<i class="fa-regular fa-star"></i></span></p>
+                        <p>البلد: <span>مصر</span></p>
+                    </div>
+                    <a href="../movie-7/movie1.html"></a>
+                    <span class="vip">VIP</span>
+                </div>
+                <!-- 8 -->
+                <div class="item8">
+                    <img src="{% static '../imgMovies/har.png' %}" class="avatar">
+                    <div class="text-d">
+                        <h2>حرب كرموز</h2>
+                        <p>تصنيف: <span>حربى، إثارة</span></p>
+                        <p>التقيم: <span>7.9<i class="fa-regular fa-star"></i></span></p>
+                        <p>البلد: <span>مصر</span></p>
+                    </div>
+                    <a href="../movie-13/movie1.html"></a>
+                </div>
+                <!-- 9 -->
+                <div class="item8">
+                    <img src="{% static '../imgMovies/kanz.png' %}" class="avatar">
+                        <div class="text-d">
+                            <h2>الكنز 2</h2>
+                            <p>تصنيف: <span>تاريخي، دراما</span></p>
+                            <p>التقيم: <span>7.1<i class="fa-regular fa-star"></i></span></p>
+                            <p>البلد: <span>مصر</span></p>
+                        </div>
+                        <a href="../movie-35/movie1.html"></a>
+                    </div>
+            </div>
+        </div>
+         <!-- section eight نهايه قسم المحتوى  -->
+    </section>
+    <!-- end section eight -->
+     <!-- start footer -->
+    <footer>
+        <!-- الاقسام الخاصه ب الاحكام و الشروط حسابات الموقع -->
+        <div class="img-logo">
+          <a href="../log in/log-in.html"><img src="{% static 'images/img-home/Rectangle 25.png' %}"></a>
+        </div>
+        <div class="ser">
+            <h4>تواصل معنا</h4>
+            <p>+12345678910</p>
+            <p>abcde@gmail.com</p>
+        </div>
+        <div class="privacy">
+            <a href="../privc/priv.html"><h4>سياسة الخصوصية</h4></a>
+            <p>سياسة الاشتراك </p>
+        </div>
+        <div class="low">
+          <a href="../low/low.html"><h4>الشروط والأحكام</h4></a>
+            <p>شروط الاشتراك </p>
+        </div>
+        <div class="social">
+            <h4>Follow Us</h4>
+            <div class="apps">
+               <a href="#"><img src="{% static 'images/img-home/Layer_1.png' %}"></a>
+                <a href="#"><img src="{% static 'images/img-home/DESIGN (1).png' %}"></a>
+                <a href="#"><img src="{% static 'images/img-home/DESIGN (2).png'%}"></a>
+                <a href="#"><img src="{% static 'images/img-home/DESIGN (3).png' %}"></a>
+                <a href="#"><img src="{% static 'images/img-home/DESIGN.png' %}"></a>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+
+
+
+
+     <!-- file javascript -->
+    <script src="{% static 'js/home.js' %}"></script>
+</body>
+</html>

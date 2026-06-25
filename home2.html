@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="اكتشف أفضل الأفلام والمسلسلات بجودة عالية.">
+    <meta name="keywords" content="افلام, مسلسلات, كرتون, اطفال">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Eight - {{ movie.title }}</title>
+    <style>
+        /* نفس الستايل السابق بدون تعديل */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        /* ... باقي الستايلات كما هي ... */
+    </style>
+</head>
+<body dir="rtl">
+    <header>
+        <h1>🎬 {{ movie.title }}</h1>
+    </header>
+
+    <main>
+        <section class="movie-details">
+            <div class="movie">
+                <h2>{{ movie.title }}</h2>
+                <p>{{ movie.description }}</p>
+                
+                <!-- عرض الفيديو الرئيسي -->
+                <div class="main-video">
+                    {% if movie.video_file %}
+                        <video controls width="100%">
+                            <source src="{{ movie.video_file.url }}" type="video/mp4">
+                            المتصفح لا يدعم تشغيل الفيديو.
+                        </video>
+                    {% elif movie.video_url %}
+                        <iframe 
+                            width="100%" 
+                            height="500" 
+                            src="{{ movie.video_url }}" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    {% else %}
+                        <p class="no-video">⚠️ لا يوجد فيديو متاح حالياً</p>
+                    {% endif %}
+                </div>
+
+                <!-- عرض الحلقات إن وجدت -->
+                {% if movie.episodes.all %}
+                    <div class="episodes-list">
+                        <h3>📺 الحلقات:</h3>
+                        {% for episode in movie.episodes.all %}
+                            <div class="episode">
+                                <h4>الحلقة {{ episode.episode_number }}: {{ episode.title }}</h4>
+                                {% if episode.video_file %}
+                                    <video controls width="100%">
+                                        <source src="{{ episode.video_file.url }}" type="video/mp4">
+                                        المتصفح لا يدعم تشغيل الفيديو.
+                                    </video>
+                                {% elif episode.video_url %}
+                                    <iframe 
+                                        width="100%" 
+                                        height="300" 
+                                        src="{{ episode.video_url }}" 
+                                        frameborder="0"
+                                        allowfullscreen>
+                                    </iframe>
+                                {% endif %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2025</p>
+    </footer>
+</body>
+</html>

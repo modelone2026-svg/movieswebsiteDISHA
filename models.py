@@ -2,7 +2,11 @@ from django.db import models
 
 # Create your models here.
 
-class Movie_kids (models.Model):
+
+
+
+class Movie(models.Model):
+
     CATEGORY_CHOICES = [
         ('كوميدي', 'كوميدي'),
         ('دراما', 'دراما'),
@@ -13,9 +17,11 @@ class Movie_kids (models.Model):
         ('تشويق', 'تشويق'),
         # يمكنك إضافة المزيد من التصنيفات هنا
     ]
+
+
     title = models.CharField(max_length=200)
     description = models.TextField()
-    category = models.CharField(max_length=100 , choices=CATEGORY_CHOICES, default='كوميدي')
+    category = models.CharField(max_length=100, choices=CATEGORY_CHOICES, default='كوميدي') 
     release_date = models.DateField()
     rating = models.FloatField()
     image = models.ImageField(upload_to='movies/')
@@ -36,8 +42,8 @@ class Movie_kids (models.Model):
         return self.title
 
 
-class Episode_kids (models.Model):
-    movie = models.ForeignKey(Movie_kids, on_delete=models.CASCADE, related_name='episodes')
+class Episode(models.Model):
+    movie = models.ForeignKey(Movie, on_delete=models.CASCADE, related_name='episodes')
     episode_number = models.PositiveIntegerField()
     title = models.CharField(max_length=200)
     video_file = models.FileField(upload_to='series/episodes/')
@@ -46,4 +52,27 @@ class Episode_kids (models.Model):
     
     def __str__(self):
         return f"{self.movie.title} - الحلقة {self.episode_number}"
+    
 
+# class soon_movie(models.Model):
+#     image = models.ImageField(upload_to='movies/')
+#     title = models.CharField(max_length=200)
+#     description = models.TextField()
+
+#     def __str__(self):
+#         return f"{self.title}"
+    
+
+
+
+# class Movie(models.Model):
+#     title = models.CharField(max_length=200)
+#     description = models.TextField()
+#     category = models.CharField(max_length=100)
+#     release_date = models.DateField()
+#     rating = models.FloatField()
+#     image = models.ImageField(upload_to='movies/')
+#     is_vip = models.BooleanField(default=False)
+
+#     def __str__(self):
+#         return self.title

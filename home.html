@@ -1,0 +1,30 @@
+{% for movie in movies %}
+    <div class="movie">
+        <h2>{{ movie.title }}</h2>
+        <p>{{ movie.description }}</p>
+
+        <!-- تشغيل الفيديو -->
+        <video controls width="100%">
+            {% if movie.video_file %}
+                <source src="{{ movie.video_file.url }}" type="video/mp4">
+            {% elif movie.video_url %}
+                <source src="{{ movie.video_url }}" type="video/mp4">
+            {% endif %}
+            المتصفح لا يدعم تشغيل الفيديو.
+        </video>
+
+        <!-- لعرض الحلقات إذا كان هناك حلقات -->
+        {% if movie.episodes.all %}
+            <h3>الحلقات:</h3>
+            {% for episode in movie.episodes.all %}
+                <div class="episode">
+                    <h4>الحلقة {{ episode.episode_number }}: {{ episode.title }}</h4>
+                    <video controls>
+                        <source src="{{ episode.video_file.url }}" type="video/mp4">
+                        المتصفح لا يدعم تشغيل الفيديو.
+                    </video>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endfor %}

@@ -1,0 +1,88 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- وصف الصفحه -->
+     <meta name="description" content="اكتشف أفضل الأفلام والمسلسلات في جميع الأنواع مثل الأكشن، الدراما، الكوميديا، والرعب. استمتع بمشاهدة أحدث العروض، تقييمات المستخدمين، والمحتوى الحصري على موقعنا. شاهد الآن بجودة عالية وبأفضل تجربة ترفيهية!">
+     <meta name="keyword" content="اشتراك,subsrip,eight,Eight">
+     <!-- file css -->
+     <link rel="stylesheet" href="{% static 'styles/sub.css' %}">
+     <!-- link font -->
+     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+     <!-- link icons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Eight</title>
+</head>
+<!-- بدايه الصفحه -->
+<body>
+    <!-- كل الصفحه -->
+    <div class="all-sub">
+        <!-- ناحيه اليسار -->
+        <div class="sub-left">
+            <!-- شعار الموقع -->
+           <div class="logo">
+            <img src="{% static 'img-sub/Rectangle 26.png' %}" alt="">
+           </div>
+            <div class="text-sub">
+                <h1>Enjoy my plus subscription</h1>
+            </div>
+
+            <div class="all">
+                <!-- اختيار مده الاشتراك -->
+                <div class="sub-right">
+                    <div class="all-card">
+                        <h1 class="title">Starter Plan</h1>
+                        <div class="cards-pay">
+                            <div class="card-pr">
+                                <h2>Pay Monthly</h2>
+                                <h1>80\<span> EG</span></h1>
+                                <p>Renewed received</p>
+                            </div>
+                            <div class="card-pr">
+                                <h2>Pay yearly</h2>
+                                <h1>50\<span> EG</span></h1>
+                                <p>Renewed received</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <!-- نموذج البيانات -->
+                <form action="">
+                   <div class="fN">
+                    <input type="text" name="full name" placeholder="Full Name" id="fullName">
+                    <spna class="full" id="full"></spna>
+                   </div>
+                    <div class="inp">
+                        <div class="ep">
+                            <input type="text" name="exp data" placeholder="Exp Data" id="expData">
+                            <span class="full" id="exp"></span>
+                        </div>
+                        <div class="cv">
+                            <input type="text" name="cvv" placeholder="Cvv" id="cvv">
+                            <span class="full" id="cv"></span>
+                        </div>
+                    </div>
+                    <div class="cou">
+                        <input type="text" name="Country" placeholder="Country" id="Country">
+                        <span class="full" id="coun"></span>
+                    </div>
+                    <div class="zi">
+                        <input type="text" name="Zip code" placeholder="Zip Code" id="zipCode">
+                        <span class="full" id="zip"></span>
+                    </div>
+                    <div class="btns">
+                        <button type="button" class="btn-skip">skip</button>
+                        <button type="submit" class="btn-submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+    </div>
+
+
+    <!-- file javascript -->
+    <script src="{% static 'js/sub.js' %}"></script>
+</body>
+</html>
