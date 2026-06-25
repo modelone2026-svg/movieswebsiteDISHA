@@ -1,0 +1,1058 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* الاولوان الخاصه ب الصفحه */
+:root{
+    --color-back: #2C3E50;
+    --color-search: #2E2E2E;
+    --color-w: #fff;
+    --color-bull: #09272F;
+    --color-nav: #0D343E;
+    --color-fo: #1E1E21;
+}
+body{
+    background: var(--color-back);
+}
+/* start header */
+header{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 50px;
+    position: relative;
+    background: var(--color-back);
+}
+/*قسم القائمه و التنيهات*/
+header .sh-left{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+ /* قسم اسم المستخدم و الصوره الخاصه بحسابه */
+header .sh-right{
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* قسم البحث */
+header .search{
+    width: 500px;
+    height: 25px;
+    background: var(--color-search);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 10px 15px;
+    gap: 15px;
+    border-radius: 25px ;
+}
+/* حقل البحث */
+header .search input{
+    display: flex;
+    width: 95%;
+    height: 100%;
+    padding: 5px;
+    font-size: 18px;
+    color: var(--color-w);
+    background: transparent;
+    border: none;
+    outline: none;
+}
+/* رمز (العدسه) البحث */
+header .search i{
+    cursor: pointer;
+    font-size: 18px;
+    width: 5%;
+}
+/* صوره الخاصه ب القائمه */
+header .sh-right .img img{
+    cursor: pointer;
+}
+/* الامتدادات الموجوده فى القائمه */
+header .sh-right .img .navgation{
+    position: absolute;
+    top: 0;
+    right:-360px;
+    width: 300px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    background: var(--color-nav);
+    transition: 0.5s;
+    z-index: 100;
+}
+/*  js مرتطبه مع ال  */
+header .sh-right .img .navgation.in{
+    right: 0;
+}
+/* رمز المسول عن غلق القائمه */
+header .sh-right .img .navgation .icon{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+/* القسم الخاص ب بعض بيانات */
+header .sh-right .img .navgation .user-infor{
+    position: absolute;
+    height: 110px;
+    width: 100%;
+    top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-bottom: 1px solid var(--color-w);
+}
+/* صوره المستخدم */
+header .sh-right .img .navgation .user-infor .pro{
+    width: 70px;
+    height: 70px;
+    position: relative;
+    background: #2E2E2E;
+    border-radius: 50%;
+    cursor: pointer;
+}
+/* اضافه الصوره المستخدم */
+header .sh-right .img .navgation .user-infor .pro #view{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(img-home/Camera.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+/* اسم المستخدم */
+header .sh-right .img .navgation .user-infor .infor h1{
+    font-size: 25px;
+    color: var(--color-w)
+}
+/*  اقسام الموقع */
+header .sh-right .img .navgation nav ul li{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    font-size: 30px;
+}
+header .sh-right .img .navgation nav ul li a{
+    text-decoration: none;
+    color: var(--color-w);
+    margin-top: 25px;
+    transition: 0.5s;
+}
+header .sh-right .img .navgation nav ul li a:hover{
+    transform: translateX(20px);
+}
+/* تسجيل الخروج */
+header .sh-right .img .navgation .out{
+    position: absolute;
+    bottom: 30px;
+    left :30px;
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+header .sh-right .img .navgation .out h2{
+    color: var(--color-w);
+    cursor: pointer;
+}
+header .sh-right .img .navgation .out img{
+    width: 38px;
+    cursor: pointer;
+}
+/*  */
+
+/* end header */
+
+/* start section one */
+.se-one{
+    height: 80vh;
+    margin: 0;
+}
+/* قسم الازرار */
+.se-one .direction{
+    text-align: start;
+}
+.se-one .direction button{
+    font-family: cursive;
+    font-weight: bold;
+    background: #ffffff44;
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: 0.5s;
+    margin:  0 10px;
+}
+.se-one .direction button:hover{
+    background-color: #ffffff;
+}
+/* section محتوى ال */
+.se-one #formlist #list .item{
+    border-radius: 20px;
+    width: 600px;
+    height: 400px;
+    background-image: linear-gradient(to top, #aec0ce,#ececf2);
+    overflow: hidden;
+    transition: 0.5s;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.se-one #formlist #list .item span{
+    position: absolute;
+    top: 20px;
+    right: -30px;
+    width: 200px;
+    font-size: 22px;
+    padding: 4px 0;
+    text-align: center;
+    background: var(--color-nav);
+    color: var(--color-w);
+    transform: rotate(30deg);
+}
+.se-one #formlist #list .item img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 15px #7e878d;
+}
+#list{
+    display: flex;
+    width: max-content;
+}
+.se-one #formlist{
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+    margin: 40px auto;
+    scroll-behavior: smooth;
+}
+.se-one #formlist::-webkit-scrollbar{
+    display: none;
+}
+/* end section one */
+/* start section two */
+.se-two{
+    height: 85vh;
+}
+/* و الازرار sectionعنون ال*/
+.se-two .btn-text{
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+/* العنوان */
+.se-two .btn-text h1{
+    font-size: 40px;
+    color: var(--color-w);
+}
+/* الازرار */
+.se-two .btn-text .direction button{
+    font-family: cursive;
+    font-weight: bold;
+    background: var(--color-bull);
+    color: var(--color-w);
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    transition: 0.5s;
+    margin:  0 5px;
+    cursor: pointer;
+}
+.se-two #formlist2 #list2 .item2{
+    border-radius: 20px;
+    width: 210px;
+    height: 360px;
+    background-image: linear-gradient(to top, #aec0ce,#ececf2);
+    overflow: hidden;
+    transition: 0.5s;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.se-two #formlist2 #list2 .item2 img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 15px #7e878d;
+}
+.se-two #formlist2 #list2{
+    display: flex;
+    width: max-content;
+}
+.se-two #formlist2{
+    width: 100%px;
+    max-width: 100%;
+    overflow: auto;
+    margin: 10px auto;
+    scroll-behavior: smooth;
+}
+#formlist2::-webkit-scrollbar{
+    display:none
+}
+/* end section two */
+/* start section therr */
+.se-therr{
+    height: 85vh;
+}
+.se-therr .btn-text2{
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.se-therr .btn-text2 h1{
+    font-size: 40px;
+    color: var(--color-w);
+}
+.se-therr .btn-text2 .direction button{
+    font-family: cursive;
+    font-weight: bold;
+    background: var(--color-bull);
+    color: var(--color-w);
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    transition: 0.5s;
+    margin:  0 5px;
+    cursor: pointer;
+}
+.se-therr #formlist3 #list3 .item3{
+    border-radius: 20px;
+    width: 230px;
+    height: 390px;
+    background-image: linear-gradient(to top, #aec0ce,#ececf2);
+    overflow: hidden;
+    transition: 0.5s;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.se-therr #formlist3 #list3 .item3 img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 15px #7e878d;
+}
+.se-therr #formlist3 #list3{
+    display: flex;
+    width: max-content;
+}
+.se-therr #formlist3{
+    width: 100%px;
+    max-width: 100%;
+    overflow: auto;
+    margin: 10px auto;
+    scroll-behavior: smooth;
+}
+#formlist3::-webkit-scrollbar{
+    display:none
+}
+/* end section therr */
+/* start section four */
+.se-four{
+    height: 85vh;
+}
+.se-four .btn-text3{
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.se-four .btn-text3 h1{
+    font-size: 40px;
+    color: var(--color-w);
+}
+.se-four .btn-text3 .direction button{
+    font-family: cursive;
+    font-weight: bold;
+    background: var(--color-bull);
+    color: var(--color-w);
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    transition: 0.5s;
+    margin:  0 5px;
+    cursor: pointer;
+}
+.se-four #formlist4 #list4 .item4{
+    border-radius: 20px;
+    width: 210px;
+    height: 360px;
+    background-image: linear-gradient(to top, #aec0ce,#ececf2);
+    overflow: hidden;
+    transition: 0.5s;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.se-four #formlist4 #list4 .item4 img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 15px #7e878d;
+}
+.se-four #formlist4 #list4{
+    display: flex;
+    width: max-content;
+}
+.se-four #formlist4{
+    width: 100%px;
+    max-width: 100%;
+    overflow: auto;
+    margin: 10px auto;
+    scroll-behavior: smooth;
+}
+.se-four #formlist4::-webkit-scrollbar{
+    display:none
+}
+/* end section four */
+/* start section five */
+.se-five{
+    height: 85vh;
+}
+.se-five .btn-text4{
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.se-five .btn-text4 h1{
+    font-size: 40px;
+    color: var(--color-w);
+}
+.se-five .btn-text4 .direction button{
+    font-family: cursive;
+    font-weight: bold;
+    background: var(--color-bull);
+    color: var(--color-w);
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    transition: 0.5s;
+    margin:  0 5px;
+    cursor: pointer;
+}
+.se-five #formlist5 #list5 .item5{
+    border-radius: 20px;
+    width: 210px;
+    height: 360px;
+    background-image: linear-gradient(to top, #aec0ce,#ececf2);
+    overflow: hidden;
+    transition: 0.5s;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.se-five #formlist5 #list5 .item5 img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 15px #7e878d;
+}
+.se-five #formlist5 #list5{
+    display: flex;
+    width: max-content;
+}
+.se-five #formlist5{
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+    margin: 10px auto;
+    scroll-behavior: smooth;
+}
+.se-five #formlist5::-webkit-scrollbar{
+    display:none
+}
+/* end section five */
+/* start section sex */
+.se-sex{
+    height: 85vh;
+}
+.se-sex .btn-text5{
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.se-sex .btn-text5 h1{
+    font-size: 40px;
+    color: var(--color-w);
+}
+.se-sex .btn-text5 .direction button{
+    font-family: cursive;
+    font-weight: bold;
+    background: var(--color-bull);
+    color: var(--color-w);
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    transition: 0.5s;
+    margin:  0 5px;
+    cursor: pointer;
+}
+.se-sex #formlist6 #list6 .item6{
+    border-radius: 20px;
+    width: 210px;
+    height: 360px;
+    background-image: linear-gradient(to top, #aec0ce,#ececf2);
+    overflow: hidden;
+    transition: 0.5s;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.se-sex #formlist6 #list6 .item6 img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 15px #7e878d;
+}
+.se-sex #formlist6 #list6{
+    display: flex;
+    width: max-content;
+}
+.se-sex #formlist6{
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+    margin: 10px auto;
+    scroll-behavior: smooth;
+}
+.se-sex #formlist6::-webkit-scrollbar{
+    display:none
+}
+/* end section sex */
+/* start section seven */
+.se-seven{
+    height: 85vh;
+}
+.se-seven .btn-text6{
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.se-seven .btn-text6 h1{
+    font-size: 40px;
+    color: var(--color-w);
+}
+.se-seven .btn-text6 .direction button{
+    font-family: cursive;
+    font-weight: bold;
+    background: var(--color-bull);
+    color: var(--color-w);
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    transition: 0.5s;
+    margin:  0 5px;
+    cursor: pointer;
+}
+.se-seven #formlist7 #list7 .item7{
+    border-radius: 20px;
+    width: 210px;
+    height: 360px;
+    background-image: linear-gradient(to top, #aec0ce,#ececf2);
+    overflow: hidden;
+    transition: 0.5s;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.se-seven #formlist7 #list7 .item7 img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 15px #7e878d;
+}
+.se-seven #formlist7 #list7{
+    display: flex;
+    width: max-content;
+}
+.se-seven #formlist7{
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+    margin: 10px auto;
+    scroll-behavior: smooth;
+}
+.se-seven #formlist7::-webkit-scrollbar{
+    display:none
+}
+/* end section seven */
+/* start section eight */
+.se-eight{
+    height: 85vh;
+}
+.se-eight .btn-text7{
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.se-eight .btn-text7 h1{
+    font-size: 40px;
+    color: var(--color-w);
+}
+.se-eight .btn-text7 .direction button{
+    font-family: cursive;
+    font-weight: bold;
+    background: var(--color-bull);
+    color: var(--color-w);
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    transition: 0.5s;
+    margin:  0 5px;
+    cursor: pointer;
+}
+.se-eight #formlist8 #list8 .item8{
+    border-radius: 20px;
+    width: 210px;
+    height: 360px;
+    background-image: linear-gradient(to top, #aec0ce,#ececf2);
+    overflow: hidden;
+    transition: 0.5s;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.se-eight #formlist8 #list8 .item8 img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 15px #7e878d;
+}
+.se-eight #formlist8 #list8{
+    display: flex;
+    width: max-content;
+}
+.se-eight #formlist8{
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+    margin: 10px auto;
+    scroll-behavior: smooth;
+}
+.se-eight #formlist8::-webkit-scrollbar{
+    display:none
+}
+/* end section eight */
+/* تفصيل الفيلم او المسلسل */
+.se-two #formlist2 #list2 .item2 .text-d,
+.se-therr #formlist3 #list3 .item3 .text-d,
+.se-four #formlist4 #list4 .item4 .text-d,
+.se-five #formlist5 #list5 .item5 .text-d,
+.se-sex #formlist6 #list6 .item6 .text-d,
+.se-seven #formlist7 #list7 .item7 .text-d,
+.se-eight #formlist8 #list8 .item8 .text-d{
+    position: absolute;
+    left: 0;
+    bottom: -50%;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(rgba(0,0,0,0.2),var(--color-back));
+    color: var(--color-w);
+    transition: 0.5s ease;
+}
+.se-two #formlist2 #list2 .item2:hover .text-d,
+.se-therr #formlist3 #list3 .item3:hover .text-d,
+.se-four #formlist4 #list4 .item4:hover .text-d,
+.se-five #formlist5 #list5 .item5:hover .text-d,
+.se-sex #formlist6 #list6 .item6:hover .text-d,
+.se-seven #formlist7 #list7 .item7:hover .text-d,
+.se-eight #formlist8 #list8 .item8:hover .text-d{
+    bottom: 0;
+}
+.se-two #formlist2 #list2 .item2 .text-d h2,
+.se-therr #formlist3 #list3 .item3 .text-d h2,
+.se-four #formlist4 #list4 .item4 .text-d h2,
+.se-five #formlist5 #list5 .item5 .text-d h2,
+.se-sex #formlist6 #list6 .item6 .text-d h2,
+.se-seven #formlist7 #list7 .item7 .text-d h2,
+.se-eight #formlist8 #list8 .item8 .text-d h2{
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+.se-two #formlist2 #list2 .item2 .text-d p,
+.se-therr #formlist3 #list3 .item3 .text-d p,
+.se-four #formlist4 #list4 .item4 .text-d p,
+.se-five #formlist5 #list5 .item5 .text-d p,
+.se-sex #formlist6 #list6 .item6 .text-d p,
+.se-seven #formlist7 #list7 .item7 .text-d p,
+.se-eight #formlist8 #list8 .item8 .text-d p{
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+.se-two #formlist2 #list2 .item2 .text-d p span i,
+.se-therr #formlist3 #list3 .item3 .text-d p span i,
+.se-four #formlist4 #list4 .item4 .text-d p span i,
+.se-five #formlist5 #list5 .item5 .text-d p span i,
+.se-sex #formlist6 #list6 .item6 .text-d p span i,
+.se-seven #formlist7 #list7 .item7 .text-d p span i,
+.se-eight #formlist8 #list8 .item8 .text-d p span i{
+    font-size: 15px;
+}
+/* امتدادات الفيلم او المسلسل */
+.se-two #formlist2 #list2 .item2 a,
+.se-therr #formlist3 #list3 .item3 a,
+.se-four #formlist4 #list4 .item4 a,
+.se-five #formlist5 #list5 .item5 a,
+.se-sex #formlist6 #list6 .item6 a,
+.se-seven #formlist7 #list7 .item7 a,
+.se-eight #formlist8 #list8 .item8 a{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+/*vip الحزاء الخاص ب  */
+.se-two #formlist2 #list2 .item2 .vip,
+.se-therr #formlist3 #list3 .item3 .vip,
+.se-four #formlist4 #list4 .item4 .vip,
+.se-five #formlist5 #list5 .item5 .vip,
+.se-sex #formlist6 #list6 .item6 .vip,
+.se-seven #formlist7 #list7 .item7 .vip,
+.se-eight #formlist8 #list8 .item8 .vip{
+    position: absolute;
+    top: 5px;
+    right: -35px;
+    width: 150px;
+    color: var(--color-w);
+    background: var(--color-bull);
+    font-size: 20px;
+    padding: 4px 0;
+    transform: rotate(30deg);
+    text-align: center;
+}
+/* start footer */
+footer{
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-fo);
+    padding-left: 30px;
+}
+footer .privacy a,
+footer .low a{
+    text-decoration: none;
+    color: var(--color-w);
+}
+footer .img-logo,
+footer .ser,
+footer .privacy,
+footer .low,
+footer .social{
+    width: 20%;
+    color: var(--color-w);
+    text-align: center;
+    cursor: pointer;
+}
+footer .img-logo,
+footer .ser h4,
+footer .privacy h4,
+footer .low h4,
+footer .social h4{
+    font-size: 25px;
+}
+footer .social h4{
+    border-bottom: 2px solid var(--color-w);
+    margin-bottom: 15px;
+}
+/* end footer */
+
+
+/* responsive */
+@media(max-width: 1024px){
+    header .search{
+        width: 350px;
+    }
+    header .sh-right{
+        width: 15%;
+    }
+    .se-two .btn-text .direction button,
+    .se-therr .btn-text2 .direction button,
+    .se-four .btn-text3 .direction button,
+    .se-five .btn-text4 .direction button,
+    .se-sex .btn-text5 .direction button,
+    .se-seven .btn-text6 .direction button,
+    .se-eight .btn-text7 .direction button
+    {
+        width: 40px;
+        height: 40px;
+    }
+}
+@media(max-width: 900px){
+    footer .img-logo img{
+        width: 150px;
+    }
+    footer .ser h4,
+    footer .privacy h4,
+    footer .low h4,
+    footer .social h4{
+    font-size: 20px;
+   }
+   footer .social img{
+    width: 20px;
+   }
+}
+@media(max-width: 750px){
+    .se-two #formlist2 #list2 .item2,
+    .se-therr #formlist3 #list3 .item3,
+    .se-four #formlist4 #list4 .item4,
+    .se-five #formlist5 #list5 .item5,
+    .se-sex #formlist6 #list6 .item6,
+    .se-seven #formlist7 #list7 .item7,
+    .se-eight #formlist8 #list8 .item8
+    {
+        width: 190px;
+        height: 320px;
+    }
+    footer .img-logo img{
+        width: 120px;
+    }
+        footer .ser h4,
+        footer .privacy h4,
+        footer .low h4,
+        footer .social h4{
+        font-size: 17px;
+       }
+       footer .social img{
+        width: 17px;
+       }
+}
+@media(max-width: 665px){
+    .se-one{
+        height: 70vh;
+    }
+    .se-one #formlist #list .item{
+        width: 480px;
+        height: 300px;
+    }
+    .se-one .direction button{
+        width: 40px;
+        height: 40px;
+    }
+    .se-two,.se-therr,.se-four,.se-five,.se-sex,.se-seven,.se-eight{
+        height: 75vh;
+    }
+    .se-one #formlist #list .item span{
+        position: absolute;
+        top: 5px;
+        right: -30px;
+        width: 150px;
+        font-size: 18px;
+        padding: 4px 0;
+        text-align: center;
+        background: var(--color-nav);
+        color: var(--color-w);
+        transform: rotate(30deg);
+    }
+}
+
+@media(max-width: 600px){
+    header .sh-left .img-logo .logo{
+        width: 110px;
+    }
+    header .search{
+        width: 250px;
+        height: 20px;
+        padding: 5px 15px;
+    }
+    header .search input{
+        font-size: 17px;
+    }
+    header .search i{
+        font-size: 16px;
+    }
+    header .sh-right .bull{
+        width: 35px;
+        height: 35px;
+    }
+    header .sh-right .bull span{
+        width: 15px;
+        height: 15px;
+        right: 0;
+        font-size: 13px;
+        text-align: center;
+    }
+    header .sh-right .bull i{
+        font-size: 17px;
+    }
+    header .sh-right .img .meun{
+        width: 30px;
+    }
+    footer .img-logo,
+    footer .ser,
+    footer .privacy,
+    footer .low,
+    footer .social{
+        width: 80%;
+    }
+    footer{
+        height: 400px;
+        flex-direction: column;
+        gap: 22px;
+    }
+    
+}
+@media(max-width: 500px){
+    header{
+        padding-right: 5px;
+    }
+    header .sh-left{
+        width: 80%;
+        margin-right: 10px;
+    }
+    header .sh-right{
+        width: 20%;
+    }
+    .se-one{
+        height: 60vh;
+    }
+    .se-one #formlist #list .item{
+        width: 380px;
+        height: 270px;
+    }
+    .se-two #formlist2 #list2 .item2,
+    .se-therr #formlist3 #list3 .item3,
+    .se-four #formlist4 #list4 .item4,
+    .se-five #formlist5 #list5 .item5,
+    .se-sex #formlist6 #list6 .item6,
+    .se-seven #formlist7 #list7 .item7,
+    .se-eight #formlist8 #list8 .item8
+    {
+        width: 160px;
+        height: 290px;
+    }
+    .se-two,.se-therr,.se-four,.se-five,.se-sex,.se-seven,.se-eight{
+        height: 70vh;
+    }
+    .se-tow .btn-text h1,.se-therr .btn-text2 h1
+    .se-four .btn-text3 h1,.se-five .btn-text4 h1,
+    .se-sex .btn-text5 h1,.se-seven .btn-text6 h1,.se-eight .btn-text7 h1{
+        font-size: 30px;
+    }
+    .se-two #formlist2 #list2 .item2 .text-d h2,
+.se-therr #formlist3 #list3 .item3 .text-d h2,
+.se-four #formlist4 #list4 .item4 .text-d h2,
+.se-five #formlist5 #list5 .item5 .text-d h2,
+.se-sex #formlist6 #list6 .item6 .text-d h2,
+.se-seven #formlist7 #list7 .item7 .text-d h2,
+.se-eight #formlist8 #list8 .item8 .text-d h2{
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+.se-two #formlist2 #list2 .item2 .text-d p,
+.se-therr #formlist3 #list3 .item3 .text-d p,
+.se-four #formlist4 #list4 .item4 .text-d p,
+.se-five #formlist5 #list5 .item5 .text-d p,
+.se-sex #formlist6 #list6 .item6 .text-d p,
+.se-seven #formlist7 #list7 .item7 .text-d p,
+.se-eight #formlist8 #list8 .item8 .text-d p{
+    font-size: 15px;
+}
+.se-two #formlist2 #list2 .item2 .text-d p span i,
+.se-therr #formlist3 #list3 .item3 .text-d p span i,
+.se-four #formlist4 #list4 .item4 .text-d p span i,
+.se-five #formlist5 #list5 .item5 .text-d p span i,
+.se-sex #formlist6 #list6 .item6 .text-d p span i,
+.se-seven #formlist7 #list7 .item7 .text-d p span i,
+.se-eight #formlist8 #list8 .item8 .text-d p span i{
+    font-size: 13px;
+}
+}
+@media(max-width: 390px){
+    header .sh-right .bull{
+        width: 28px;
+        height: 28px;
+    }
+    header .sh-right .img .meun{
+        width: 26px;
+    }
+    header .sh-left{
+        width: 80%;
+        margin-right: 10px;
+    }
+    .se-one #formlist #list .item{
+        width: 330px;
+        height: 250px;
+    }
+    .se-one .direction button{
+        width: 35px;
+        height: 35px;
+    }
+}

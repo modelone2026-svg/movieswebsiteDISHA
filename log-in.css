@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: "Abel", serif;
+}
+/* الوان الخاصه  الصفحه */
+:root{
+    --color-back: #2C3E50;
+    --color-tex: #1E1E21;
+    --color-btn: #000;
+    --color-w: #fff;
+    --color-bor: #D2D2D2;
+}
+/* قسم دخول المشرف */
+.admin-register{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    background:var(--color-back);
+    overflow: hidden;
+    transition: 0.6s;
+}
+/* شعار الموقع */
+.admin-register .img-logo-a{
+    margin: 50px 0;
+    width: 250px;
+    height: 100px;
+}
+.admin-register .img-logo-a img{
+    margin: 50px 0;
+    width: 100%;
+    height: 100%;
+}
+.admin-register .text-user{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.admin-register .text-user h1{
+    font-size: 65px;
+    color: var(--color-w);
+    text-transform: uppercase;
+}
+/* نموذج الدخول */
+.admin-register form .inputs-admin{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.admin-register form .inputs-admin .admin-log{
+    width: 450px;
+    height: 55px;
+    border: 2px solid var(--color-bor);
+    border-radius: 6px;
+    margin-top: 20px;
+    position: relative;
+}
+.admin-register form .inputs-admin .admin-log input{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 85%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 7px;
+    color: var(--color-tex);
+}
+.admin-register form .inputs-admin .admin-log i{
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: var(--color-bor);
+    cursor: pointer;
+}
+.admin-register .btn-reg-admin{
+    border: none;
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    color: var(--color-w);
+    background: var(--color-btn);
+    font-size: 18px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+@media(max-width: 600px){
+    .admin-register .text-user h1{
+        font-size: 45px;
+    }
+    .admin-register form .inputs-admin .admin-log{
+        width: 350px;
+        height: 50px;
+    }
+}
+@media(max-width: 450px){
+    .admin-register .text-user h1{
+        font-size: 40px;
+    }
+    .admin-register form .inputs-admin .admin-log{
+        width: 280px;
+        height: 50px;
+    }
+}

@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: "Abel", serif;
+}
+/* الالوان الخاصه ب الصفحه */
+:root{
+    --color-all: #2C3E50;
+    --color-text: #FFF;
+    --color-card: #428898;
+    --color-in: rgba(146, 146, 146, 0.51);
+    --color-big: #09272F;
+    --color-btn: #000;
+}
+body{
+    background: var(--color-all);
+}
+/* كل الصفحه */
+.all-sub{
+    width: 100%;
+    background: var(--color-all);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* نموذج البيانات */
+.all-sub .sub-left{
+    width: 100%;
+    height: 100%;
+    margin: 20px 0;
+}
+.all-sub .sub-left .logo img{
+    padding-top: 30px;
+}
+.all-sub .sub-left .text-sub{
+    padding-left: 50px;
+    padding-top: 20px;
+}
+.all-sub .sub-left .text-sub h1{
+    font-size: 40px;
+    color: var(--color-text)
+}
+.all-sub .sub-left form{
+    padding: 30px 50px 0px 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+/* الحقول */
+.all-sub .sub-left form input{
+    width: 100%;
+    height: 35px;
+    padding: 5px 10px;
+    background: transparent;
+    border: 2px solid var(--color-card);
+    border-radius: 10px;
+    font-size: 18px;
+}
+.all-sub .sub-left form .fN,
+.all-sub .sub-left form .ep,
+.all-sub .sub-left form .cv,
+.all-sub .sub-left form .cou,
+.all-sub .sub-left form .zi{
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+}
+.all-sub .sub-left form .fN .full,
+.all-sub .sub-left form .ep .full,
+.all-sub .sub-left form .cv .full,
+.all-sub .sub-left form .cou .full,
+.all-sub .sub-left form .zi .full{
+    position: absolute;
+    bottom: -25px;
+    left:10px;
+    color: var(--color-text);
+    font-size: 14px;
+}
+.all-sub .sub-left form .inp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 30px
+}
+.all-sub .sub-left form .inp input{
+    width: 100%;
+}
+.all-sub .sub-left form .btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 30px
+}
+/* الازرار */
+.all-sub .sub-left form .btns .btn-skip,
+.all-sub .sub-left form .btns .btn-submit{
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-text);
+    cursor: pointer;
+}
+.all-sub .sub-left form .btns .btn-skip{
+    background: var(--color-btn);
+}
+.all-sub .sub-left form .btns .btn-submit{
+    background: var(--color-card);
+}
+/* اختيار مده الاشتراك */
+.all-sub .sub-right{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.all-sub .sub-right .all-card{
+    width: 40%;
+    height: 65%;
+    padding: 15px 50px;
+    border-radius: 25px;
+    background: var(--color-big);
+    color: var(--color-text);
+    overflow: hidden;
+}
+.all-sub .sub-right .all-card .title{
+    font-size: 32px;
+    margin-bottom: 50px;
+    margin-left: 30px;
+}
+.all-sub .sub-right .all-card .cards-pay{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.all-sub .sub-right .all-card .cards-pay .card-pr{
+    width: 100%;
+    height: 154px;
+    border: 2px solid var(--color-card);
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px 15px;
+    font-weight: 400;
+    cursor: pointer;
+}
+/*js مرتطبه مع  */
+.all-sub .sub-right .all-card .cards-pay .card-pr.back-color{
+    background: var(--color-card);
+}
+.all-sub .sub-right .all-card .cards-pay .card-pr h1{
+    font-size: 30px;
+}
+.all-sub .sub-right .all-card .cards-pay .card-pr h1 span{
+    font-size: 20px;
+}
+
+
+
+
+/* responsive */
+@media(max-width: 800px){
+    .all-sub .sub-right .all-card .cards-pay .card-pr h2{
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .all-sub .sub-right .all-card{
+        width: 60%;
+    }
+}
+
+@media(max-width: 550px){
+    .all-sub .sub-right .all-card .cards-pay .card-pr p{
+        font-size: 15px;
+        font-weight: 400;
+    }
+    .all-sub .sub-right .all-card{
+        width: 65%;
+    }
+}
+@media(max-width: 460px){
+    .all-sub .sub-right .all-card .cards-pay .card-pr p{
+        font-size: 12px;
+        font-weight: 400;
+    }
+}
